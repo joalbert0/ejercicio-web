@@ -17,10 +17,7 @@
         var divnew2 = $('#new2');
     </script>
 
-
     <div class="p2" id="new2">
-        <label>pantalla 3 </label>
-
 
         <script>
             var nm1 = 10;
@@ -33,17 +30,12 @@
                 if (i % 2 == 1) {
                     uri = "estrella.png"
                 } else {
-                    uri = "moneda.jpg"
+                    uri = "moneda.png"
                 }
-
                 html += ' <div class="lissta" id="lista">'
-
-                html += '<img src=' + uri + ' width="75px" height="75px">'
-                html += '<p>' + nm2 + '</p>'
-
+                html += '<img src=' + uri + '  width="75px" height="90px">'
+                html += '<p >' + nm2 + '</p>'
                 html += '</div>'
-
-
             }
             divnew2.append(html);
         </script>
