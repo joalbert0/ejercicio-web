@@ -16,38 +16,57 @@
 <body>
 
     <script type="text/javascript">
-        function cargar(div, destino) {
-            $(div).load(destino);
-        }
+        // function cargar(div, destino) {
+        // var vr1 = document.getElementById("inp2").value;
+        // var vr2 = document.getElementById("inp3").value;
+        // $.ajax({
+        //     type: 'post',
+        //     data: {
+        //         param1: "vr1",
+        //         param2: "vr2"
+        //     }
+        // })
+        //   console.log(document.getElementById("inp2").value);
+        //   $(div).load(destino);
+        // console.log(document.getElementById("inp2").value);
+
+
+        //  }
+        var divrf = $('#cuadrad');
+
+        function cargar() {
+
+            document.getElementById("cuadrad").style.display = "none";
+
+
+        };
     </script>
-
-
-
-
-
 
 
     <ul class="nav">
         <li> <a href="" id="mostrar1">CONFIG</a> </li>
-        <li> <a href="Javascript: cargar('#pty','index2.html');">GRID</a> </li>
-        <li> <a href="Javascript: cargar('#pty','index3.html');">LIST</a> </li>
+        <!-- <li> <a href="Javascript:  cargar('#pty','index2.html?vr1');" id="btn2">GRID</a> </li>
+        <li> <a href="Javascript:  cargar('#pty','index3.html');" id="btn3">LIST</a> </li> -->
+        <li> <a href="" id="btn2" onclick="cargar()">GRID</a> </li>
+        <li> <a href="" id="btn3">LIST</a> </li>
     </ul>
-
-
-
     <br>
-
 
     <div class="pantalla" id="pty">
 
         <div class="cuadrado" id="cuadrad">
             <p id="text1">Numero de elementos</p>
-            <input type="text" nombre="input1">
+            <input type="text" nombre="input1" id="inp2">
             <p id="text2">Nombre base de elemento</p>
-            <input type="text" nombre="input2">
+            <input type="text" nombre="input2" id="inp3">
         </div>
 
     </div>
+
+
+
+
+
 
 </body>
 
