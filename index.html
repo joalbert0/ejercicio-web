@@ -8,46 +8,120 @@
     <link href="http://allfont.es/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
     <LINK href="styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script type="text/javascript" src="index.js" rel="import"></script>
     <title>Pagina</title>
 
 </head>
 
 <body>
 
-    <script type="text/javascript">
+
+    <!-- <script type="text/javascript">
         function cargar(div, destino) {
+            console.log(document.getElementById("inp2").value);
             $(div).load(destino);
         }
-    </script>
-
-
-
-
-
-
+    </script> -->
 
     <ul class="nav">
-        <li> <a href="" id="mostrar1">CONFIG</a> </li>
-        <li> <a href="Javascript: cargar('#pty','index2.html');">GRID</a> </li>
-        <li> <a href="Javascript: cargar('#pty','index3.html');">LIST</a> </li>
+        <li> <a id="btn1" onclick="cargar1()" style="cursor:pointer">CONFIG</a> </li>
+        <!-- <li> <a href="Javascript:  cargar('#pty','index2.html?vr1');" id="btn2">GRID</a> </li> -->
+        <!-- <li> <a href="Javascript:  cargar('#pty','index3.html');" id="btn3">LIST</a> </li> -->
+        <li> <a id="btn2" onclick="cargar2() ,imp2()" style="cursor:pointer">GRID</a> </li>
+        <li> <a id="btn3" onclick="cargar3(), imp3()" style="cursor:pointer">LIST</a> </li>
     </ul>
-
-
-
     <br>
-
 
     <div class="pantalla" id="pty">
 
         <div class="cuadrado" id="cuadrad">
             <p id="text1">Numero de elementos</p>
-            <input type="text" nombre="input1">
-            <p id="text2">Nombre base de elemento</p>
-            <input type="text" nombre="input2">
+            <input type="text" nombre="input1" id="inp2" value="10" style="text-align:center">
+            <p id=" text2 ">Nombre base de elemento</p>
+            <input type="text " nombre="input2 " id="inp3" value="mi elemento" style="text-align:center">
         </div>
 
     </div>
+
+
+
+    <script>
+        var divnew3 = $('#new3');
+    </script>
+    <div class="p3" id="new3"></div>
+    <script>
+        var nm1 = 20;
+        var nm2 = "";
+
+        function imp2() {
+            nm1 = parseInt($('#inp2').val());
+
+            nm2 = $('#inp3').val();
+
+            var html = '';
+            var uri = '';
+            for (i = nm1; i > 0; i--) {
+                console.log(i);
+                if (i % 2 == 1) {
+                    uri = "estrella.png"
+                } else {
+                    uri = "moneda.png"
+                }
+                html += ' <div class="lista" id="lista">'
+                html += '<img src=' + uri + ' width="150px" height="100px">'
+                html += '<p>' + nm2 + '</p>'
+                html += '</div>'
+            }
+            var element = document.querySelector("#pty");
+            var child = document.getElementById("new3");
+            child.innerHTML = html;
+            element.appendChild(child);
+        }
+    </script>
+    </div>
+
+
+
+
+
+    <script>
+        var divnew2 = $('#new2');
+    </script>
+
+    <div class="p2" id="new2">
+
+        <script>
+            function imp3() {
+                var nm1 = 10;
+                var nm2 = "texto";
+
+                var html = '';
+                var uri = '';
+                for (i = nm1; i > 0; i--) {
+                    console.log(i);
+                    if (i % 2 == 1) {
+                        uri = "estrella.png"
+                    } else {
+                        uri = "moneda.png"
+                    }
+                    html += ' <div class="lissta" id="lista">'
+                    html += '<img src=' + uri + '  width="75px" height="90px">'
+                    html += '<p >' + nm2 + '</p>'
+                    html += '</div>'
+                }
+                var element = document.querySelector("#pty");
+                var child = document.getElementById("new2");
+                child.innerHTML = html;
+                element.appendChild(child);
+            }
+        </script>
+
+
+
+
+
+
+
 
 </body>
 

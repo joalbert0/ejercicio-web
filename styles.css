@@ -1,38 +1,63 @@
+html,
 body {
-    background-color: F5F5F5;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #F5F5F5;
+    overflow: auto;
+    min-height: 100%;
 }
 
 .nav li {
     float: left;
     list-style-type: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    margin: none;
 }
 
 .nav li a:hover {
-    background: red;
+    background: rgb(104, 172, 211);
 }
 
 .nav li a {
-    background-color: rgb(255, 255, 255);
-    border: solid 1px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    background-color: rgb(58, 151, 238);
+    border: none;
+    position: relative;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 15px 160px;
+    padding: 15px 190px 15px 190px;
     list-style: none;
-    display: block;
-    box-shadow: 2px 7px 4px -4px rgb(0, 0, 0);
+    box-shadow: 0px 3px 0px 0px rgb(0, 0, 0, 0.19);
 }
 
 .nav li ul {
     display: none;
-    position: absolute;
     min-width: 140px;
+}
+
+.pantalla {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    min-height: 100%;
 }
 
 .cuadrado {
     width: 300px;
     height: 200px;
     margin: 5px;
-    background-color: #034748;
+    background-color: #1a3a64f6;
     border: solid 1px rgb(0, 0, 0);
     color: white;
     position: absolute;
@@ -44,26 +69,63 @@ body {
     align-items: center;
     display: table-cell;
     text-align: center;
+    display: block;
+}
+
+.lista {
+    width: 250px;
+    height: 190px;
+    margin: 8px;
+    margin-left: 40px;
+    background-color: #1a3a64f6;
+    border: solid 1px rgb(0, 0, 0);
+    color: white;
+    display: inline-grid;
+    border-radius: 30px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 3);
+    grid-auto-rows: 100px;
+    justify-content: right;
+    align-items: right;
+    display: table-cell;
+    text-align: center;
+}
+
+.lissta {
+    width: 93%;
+    height: 100px;
+    margin: 15px;
+    margin-left: 53px;
+    margin-right: 36px;
+    border-radius: 20px;
+    background-color: #1a3a64f6;
+    border: solid 1px rgb(0, 0, 0);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 3px 0px 0px rgb(0, 0, 0, 0.19);
 }
 
 .p2 {
+    background-color: #F5F5F5;
     display: block;
-    margin-top: 50px;
     top: 40%;
-    width: 300px;
+    margin-top: 50px;
+    width: 100%;
     height: 300px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 .p3 {
-    display: block;
-    top: 40%;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 200px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-color: #F5F5F5;
+    display: inline-grid;
     margin-top: 50px;
-    width: 300px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 90%;
+    height: 90%;
 }
