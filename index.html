@@ -8,17 +8,13 @@
     <link href="http://allfont.es/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
     <LINK href="styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="index.js" rel="import"></script>
-=======
->>>>>>> 9df0d5159676b2b3787730794e29281fd544519f
     <title>Pagina</title>
 
 </head>
 
 <body>
 
-<<<<<<< HEAD
 
     <!-- <script type="text/javascript">
         function cargar(div, destino) {
@@ -41,6 +37,7 @@
         <div class="cuadrado" id="cuadrad">
             <p id="text1">Numero de elementos</p>
             <input type="text" nombre="input1" id="inp2" value="10" style="text-align:center">
+            <br></br>
             <p id=" text2 ">Nombre base de elemento</p>
             <input type="text " nombre="input2 " id="inp3" value="mi elemento" style="text-align:center">
         </div>
@@ -60,87 +57,78 @@
         function imp2() {
             nm1 = parseInt($('#inp2').val());
 
-            nm2 = $('#inp3').val();
+            if (isNaN(nm1) == true) {
+                alert("Introduce un numero");
+                cargar1();
 
-            var html = '';
-            var uri = '';
-            for (i = nm1; i > 0; i--) {
-                console.log(i);
-                if (i % 2 == 1) {
-                    uri = "estrella.png"
-                } else {
-                    uri = "moneda.png"
+            } else {
+                nm2 = $('#inp3').val();
+
+                var html = '';
+                var uri = '';
+                var cont = 0;
+                for (i = nm1; i > 0; i--) {
+                    console.log(i);
+                    cont++;
+                    if (i % 2 == 1) {
+                        uri = "estrella.png"
+                    } else {
+                        uri = "moneda.png"
+                    }
+                    html += ' <div class="lista" id="lista">'
+                    html += '<img src=' + uri + ' width="150px" height="100px ">'
+                    html += '<p>' + nm2 + " " + cont + '</p>'
+                    html += '</div>'
                 }
-                html += ' <div class="lista" id="lista">'
-                html += '<img src=' + uri + ' width="150px" height="100px">'
-                html += '<p>' + nm2 + '</p>'
-                html += '</div>'
+                var element = document.querySelector("#pty");
+                var child = document.getElementById("new3");
+                child.innerHTML = html;
+                element.appendChild(child);
             }
-            var element = document.querySelector("#pty");
-            var child = document.getElementById("new3");
-            child.innerHTML = html;
-            element.appendChild(child);
         }
     </script>
     </div>
 
 
 
-=======
-    <script type="text/javascript">
-        function cargar1() {
-            document.getElementById("cuadrad").style.display = "block";
-            document.getElementById("btn1").style.backgroundColor = "rgb(33, 174, 199)";
-            document.getElementById("btn2").style.backgroundColor = "rgb(58, 151, 238)";
-            document.getElementById("btn3").style.backgroundColor = "rgb(58, 151, 238)";
-        };
-
-        function cargar2() {
-            document.getElementById("cuadrad").style.display = "none";
-            document.getElementById("btn2").style.backgroundColor = "rgb(33, 174, 199)";
-            document.getElementById("btn1").style.backgroundColor = "rgb(58, 151, 238)";
-            document.getElementById("btn3").style.backgroundColor = "rgb(58, 151, 238)";
-        }
->>>>>>> 9df0d5159676b2b3787730794e29281fd544519f
-
-        function cargar3() {
-            document.getElementById("cuadrad").style.display = "none";
-            document.getElementById("btn3").style.backgroundColor = "rgb(33, 174, 199)";
-            document.getElementById("btn1").style.backgroundColor = "rgb(58, 151, 238)";
-            document.getElementById("btn2").style.backgroundColor = "rgb(58, 151, 238)";
-        }
-    </script>
 
     <script>
         var divnew2 = $('#new2');
     </script>
 
-<<<<<<< HEAD
     <div class="p2" id="new2">
 
         <script>
             function imp3() {
-                var nm1 = 10;
-                var nm2 = "texto";
 
-                var html = '';
-                var uri = '';
-                for (i = nm1; i > 0; i--) {
-                    console.log(i);
-                    if (i % 2 == 1) {
-                        uri = "estrella.png"
-                    } else {
-                        uri = "moneda.png"
+                nm1 = parseInt($('#inp2').val());
+                if (isNaN(nm1) == true) {
+                    alert("Introduce un numero");
+                    cargar1();
+
+                } else {
+                    nm2 = $('#inp3').val();
+                    var html = '';
+                    var uri = '';
+                    var cont = 0;
+                    for (i = nm1; i > 0; i--) {
+                        cont++;
+                        console.log(i);
+                        if (i % 2 == 1) {
+                            uri = "estrella.png"
+                        } else {
+                            uri = "moneda.png"
+                        }
+                        html += ' <div class="lissta" id="lista">'
+                        html += '<img src=' + uri + '  width="75px" height="90px">'
+                        html += '<p >' + nm2 + " " + cont + '</p>'
+                        html += '</div>'
                     }
-                    html += ' <div class="lissta" id="lista">'
-                    html += '<img src=' + uri + '  width="75px" height="90px">'
-                    html += '<p >' + nm2 + '</p>'
-                    html += '</div>'
+                    var element = document.querySelector("#pty");
+                    var child = document.getElementById("new2");
+                    child.innerHTML = html;
+                    element.appendChild(child);
                 }
-                var element = document.querySelector("#pty");
-                var child = document.getElementById("new2");
-                child.innerHTML = html;
-                element.appendChild(child);
             }
         </script>
 
@@ -149,32 +137,6 @@
 
 
 
-=======
-    <script type="text/javascript">
-        function cargar(div, destino) {
-            console.log(document.getElementById("inp2").value);
-            $(div).load(destino);
-        }
-    </script>
-
-    <ul class="nav">
-        <li> <a id="btn1" onclick="cargar1(),press()" style="cursor:pointer">CONFIG</a> </li>
-        <li> <a href="Javascript:  cargar('#pty','index2.html?vr1');" id="btn2">GRID</a> </li>
-        <li> <a href="Javascript:  cargar('#pty','index3.html');" id="btn3">LIST</a> </li>
-        <!-- <li> <a id="btn2" onclick="cargar2()" style="cursor:pointer">GRID</a> </li>
-        <li> <a id="btn3" onclick="cargar3()" style="cursor:pointer">LIST</a> </li> -->
-    </ul>
-    <br>
-
-    <div class="pantalla" id="pty">
-
-        <div class="cuadrado" id="cuadrad">
-            <p id="text1">Numero de elementos</p>
-            <input type="text" nombre="input1" id="inp2" value="10" style="text-align:center">
-            <p id=" text2 ">Nombre base de elemento</p>
-            <input type="text " nombre="input2 " id="inp3 " value="mi elemento" style="text-align:center">
-        </div>
->>>>>>> 9df0d5159676b2b3787730794e29281fd544519f
 
 
 

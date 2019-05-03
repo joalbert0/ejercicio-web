@@ -9,7 +9,7 @@ app.listen('3000', function() {
 });
 
 function cargar1() {
-    document.getElementById("pty").style.display = "block";
+    // document.getElementById("pty").style.display = "block";
     document.getElementById("cuadrad").style.display = "block";
     document.getElementById("new3").style.display = "none";
     document.getElementById("new2").style.display = "none";
